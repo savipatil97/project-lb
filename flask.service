@@ -1,0 +1,11 @@
+[Unit]
+Description=Gunicorn instance to serve Flask
+After=network.target
+[Service]
+User=root
+Group=www-data
+WorkingDirectory=/opt/apps
+Environment="PATH=/opt/apps/env/bin"
+ExecStart=//usr/bin/python3 /opt/apps/app.py
+[Install]
+WantedBy=multi-user.target
