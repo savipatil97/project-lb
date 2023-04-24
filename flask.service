@@ -2,6 +2,8 @@
 Description=Gunicorn instance to serve Flask
 After=network.target
 [Service]
+Type=idle
+Restart=on-failure
 User=root
 Group=www-data
 WorkingDirectory=/opt/apps
