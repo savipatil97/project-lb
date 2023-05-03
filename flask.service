@@ -5,8 +5,9 @@ After=network.target
 Type=idle
 Restart=on-failure
 User=root
+Group=www-data
 WorkingDirectory=/opt/apps
 Environment="PATH=/opt/apps/env/bin"
-ExecStart=//usr/bin/python3 /opt/apps/app.py
+ExecStart=/opt/apps/env/bin/python3 /opt/apps/app.py
 [Install]
 WantedBy=multi-user.target
